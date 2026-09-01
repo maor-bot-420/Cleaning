@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>רשימת בדיקת ניקיון צוותית</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="header-bar">
+      <h1>רשימת בדיקת ניקיון</h1>
+      <button id="themeToggleBtn" type="button" class="theme-btn" aria-label="החלף ערכת נושא">🌙</button>
+    </div>
+
+    <div class="form-group">
+      <label for="teamSelect">בחר צוות:</label>
+      <select id="teamSelect">
+        <option value="1">צוות אלפא (1)</option>
+        <option value="2">צוות בטא (2)</option>
+      </select>
+      <div id="teamMembers" class="team-members">👥 חברי הצוות: טוען...</div>
+    </div>
+
+    <hr />
+
+    <form id="checklistForm">
+      <h2>משימות לביצוע</h2>
+      <div id="tasksContainer">
+        <p class="loading-text">טוען משימות...</p>
+      </div>
+
+      <button type="submit" id="submitBtn" disabled>שלח את כל המשימות</button>
+    </form>
+
+    <hr />
+
+    <h2>דיווחים אחרונים</h2>
+    <div id="submissionsLog">
+      <p class="loading-text">טוען היסטוריה...</p>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
