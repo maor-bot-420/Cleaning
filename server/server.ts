@@ -79,8 +79,8 @@ app.get('/api/teams', async (req: Request, res: Response) => {
 // Serve frontend static build files from the dist folder
 app.use(express.static(path.join(__dirname, '../dist')));
 
-// Fallback route using modern Express catch-all syntax
-app.get('/{*path}', (req: Request, res: Response) => {
+// Fallback route using Express 5 named wildcard syntax
+app.get('/*splat', (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
